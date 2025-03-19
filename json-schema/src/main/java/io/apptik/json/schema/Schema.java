@@ -330,11 +330,11 @@ public abstract class Schema extends JsonObjectWrapper implements MetaInfo{
     }
 
     public Integer getMaxItems() {
-        return getJson().optInt("maxItems");
+        return getJson().optInt("maxItems", 10);
     }
 
     public Integer getMinItems() {
-        return getJson().optInt("minItems");
+        return getJson().optInt("minItems", 1);
     }
 
     public boolean getUniqueItems() {
